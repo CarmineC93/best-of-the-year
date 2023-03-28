@@ -5,6 +5,10 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <div th:replace="~{fragments/link :: link}"></div>
+
+
   <title>Songs</title>
 </head>
 <body>
@@ -12,9 +16,10 @@
 <!--
 <h4> <span th:text="${allSongs}"></span></h4>
 -->
+<div th:replace="~{fragments/navbar :: navbar}"></div>
 
 <ul>
-<li th:each="song : ${songs}" th:text="${song.name}">
+<li th:each="song : ${songs}">
   <a th:href="@{|/songs/${song.id}|}" th:text="${song.name}"></a>
 
 </li>
