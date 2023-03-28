@@ -9,8 +9,15 @@
 </head>
 <body>
 <h1>Best Movies</h1>
+<!--
 <h4> <span th:text="${allMovies}"></span></h4>
-<h4> <span th:text="${name}"></span></h4>
+-->
+
+<ul>
+  <li th:each="movie : ${movies}">
+    <a th:href="@{|/movies/${movie.id}|}" th:text="${movie.name}"></a>
+  </li>
+</ul>
 
 </body>
 </html>

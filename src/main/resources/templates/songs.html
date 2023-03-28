@@ -9,7 +9,16 @@
 </head>
 <body>
 <h1>Best Songs</h1>
+<!--
 <h4> <span th:text="${allSongs}"></span></h4>
+-->
+
+<ul>
+<li th:each="song : ${songs}" th:text="${song.name}">
+  <a th:href="@{|/songs/${song.id}|}" th:text="${song.name}"></a>
+
+</li>
+</ul>
 
 </body>
 </html>

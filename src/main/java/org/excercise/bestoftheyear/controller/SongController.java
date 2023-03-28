@@ -26,11 +26,11 @@ public class SongController {
     @GetMapping
     public String songs(Model model){
         List<Song> bestSongs = getBestSongs();
-        String songsList = "";
+        /*String songsList = "";
         for(Song song : bestSongs){
-            songsList += song.getName() + ", ";}
+            songsList += song.getName() + ", ";}*/
 
-        model.addAttribute("allSongs", songsList);
+        model.addAttribute("songs", bestSongs);
         return "songs";
     }
 
