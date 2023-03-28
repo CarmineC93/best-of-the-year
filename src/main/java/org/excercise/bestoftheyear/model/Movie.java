@@ -1,4 +1,4 @@
-package org.excercise.bestoftheyear;
+package org.excercise.bestoftheyear.model;
 
 public class Movie {
     //ATTRIBUTES
@@ -9,9 +9,8 @@ public class Movie {
         this.id = id;
         this.name= name;
     }
+
     //GETTER E SETTER
-
-
     public String getName() {
         return name;
     }
@@ -26,5 +25,12 @@ public class Movie {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString(){
+        return "Movie=" +
+                super.toString() + '\'' +
+               ".";
     }
 }

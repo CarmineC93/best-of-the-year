@@ -1,4 +1,4 @@
-package org.excercise.bestoftheyear;
+package org.excercise.bestoftheyear.model;
 
 public class Song {
     //ATTRIBUTES
@@ -27,5 +27,12 @@ public class Song {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString(){
+        return "Song=" +
+                super.toString() + '\'' +
+                ".";
     }
 }
