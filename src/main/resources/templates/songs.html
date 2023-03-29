@@ -16,7 +16,7 @@
 <!--
 <h4> <span th:text="${allSongs}"></span></h4>
 -->
-<div th:replace="~{fragments/navbar :: navbar}"></div>
+<div th:replace="~{fragments/navbar :: navbar('songs')}"></div>
 
 <ul>
 <li th:each="song : ${songs}">
